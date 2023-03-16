@@ -1,13 +1,11 @@
-package org.sample.jpa.repository;
+package org.corneyeski.repository;
 
-import org.sample.jpa.entities.Usuario;
-import org.springframework.data.repository.CrudRepository;
-import org.springframework.stereotype.Component;
+import org.corneyeski.entities.Usuario;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-@Component
-public interface UsuarioRepository extends CrudRepository<Usuario, Integer> {
+public interface UsuarioRepository extends JpaRepository<Usuario, Integer> {
 
 
 }

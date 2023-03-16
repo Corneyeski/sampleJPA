@@ -1,20 +1,16 @@
-package org.sample.jpa.service;
+package org.corneyeski.service;
 
-import org.sample.jpa.entities.Usuario;
-import org.sample.jpa.exceptions.ResourceNotFoundException;
-import org.sample.jpa.repository.UsuarioRepository;
+import org.corneyeski.entities.Usuario;
+import org.corneyeski.exceptions.ResourceNotFoundException;
+import org.corneyeski.repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class UsuarioServiceImpl implements UsuarioService {
 
-    private final UsuarioRepository usuarioRepository;
-
     @Autowired
-    public UsuarioServiceImpl(UsuarioRepository usuarioRepository) {
-        this.usuarioRepository = usuarioRepository;
-    }
+    private UsuarioRepository usuarioRepository;
 
     @Override
     public Usuario create(Usuario usuario) {

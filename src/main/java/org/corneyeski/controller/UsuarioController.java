@@ -1,8 +1,8 @@
-package org.sample.jpa.controller;
+package org.corneyeski.controller;
 
-import org.sample.jpa.entities.Usuario;
-import org.sample.jpa.exceptions.ResourceNotFoundException;
-import org.sample.jpa.service.UsuarioService;
+import org.corneyeski.entities.Usuario;
+import org.corneyeski.exceptions.ResourceNotFoundException;
+import org.corneyeski.service.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -10,12 +10,8 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/jpa/user")
 public class UsuarioController {
 
-    private final UsuarioService usuarioService;
-
     @Autowired
-    public UsuarioController(UsuarioService usuarioService) {
-        this.usuarioService = usuarioService;
-    }
+    private UsuarioService usuarioService;
 
 
     @GetMapping("/{id}")

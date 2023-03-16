@@ -1,8 +1,10 @@
-package org.sample.jpa.service;
+package org.corneyeski.service;
 
-import org.sample.jpa.entities.Usuario;
-import org.sample.jpa.exceptions.ResourceNotFoundException;
+import org.corneyeski.entities.Usuario;
+import org.corneyeski.exceptions.ResourceNotFoundException;
+import org.springframework.stereotype.Service;
 
+@Service
 public interface UsuarioService {
 
     Usuario create(Usuario usuario);
